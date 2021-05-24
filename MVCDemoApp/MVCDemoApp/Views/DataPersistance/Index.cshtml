@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>specify your references:</h2>
+
+<form asp-action="WriteCookies" asp-controller="DataPersistance">
+    <select name="setting">
+        <option value="fontname">Font Name</option>
+        <option value="fontsize">Font Size</option>
+        <option value="color"> Color</option>
+    </select>
+    <input type="text" name="settingValue" />
+    <input type="checkbox" name="isPersistence" value="true" />Is Persistence?
+    <input type="submit" name="Write Cookie" />
+
+</form>
+<h4>@ViewBag.Message</h4>
+<h4><a asp-action="ReadCookies" asp-controller="DataPersistance">read cookies</a></h4>
